@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
+    "
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Comviq Clone</title>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <!-- Website Navbar -->
+      <nav class="desktop-menu">
+        <!-- left side -->
+        <div class="logo">
+          <a href="/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="102"
+              height="24"
+              fill="none"
+            >
+              <path
+                fill="current"
+                fill-rule="evenodd"
+                d="M8.411 0c3.775 0 6.993 3.113 6.993 6.509v3.084h-4.798V7.157c0-1.734-1.16-2.808-2.597-2.808h-.618c-1.426 0-2.6 1.082-2.6 2.808v9.596c0 1.344 1.164 2.777 2.6 2.777h.622c1.422 0 2.596-1.419 2.596-2.777v-2.468h4.795v2.622c-.03 3.834-3.135 6.936-6.978 6.971H6.989C3.143 23.841.038 20.733.014 16.897V6.509C.014 3.113 3.214 0 6.974 0h1.437Zm18.353 0c3.778 0 6.993 3.113 6.993 6.52v10.387c-.03 3.834-3.135 6.936-6.979 6.971h-1.436c-3.854-.027-6.97-3.138-6.993-6.981V6.509C18.35 3.113 21.564 0 25.327 0h1.437Zm2.198 16.753-.003-9.596c0-1.734-1.16-2.808-2.597-2.808h-.618c-1.426 0-2.6 1.081-2.6 2.808v9.596c0 1.344 1.164 2.777 2.6 2.777h.621c1.423 0 2.597-1.419 2.597-2.777Zm16.575-6.232L50.148.369h3.958v23.144h-4.64V10.954l-3.93 8.547h-.308l-3.836-8.547v12.559h-4.611V.369h4.238l4.518 10.152Zm19.775 6.326L68.961.369h4.856L67.94 23.513h-5.632L56.743.369h4.855l3.714 16.478ZM76.475.369h4.733v23.14h-4.733V.37Zm21.714 21.844.004-.004a.36.36 0 0 0-.535-.047 6.805 6.805 0 0 1-4.522 1.716H90.98c-3.769 0-6.824-3.047-6.824-6.806V6.806a6.772 6.772 0 0 1 1.991-4.82A6.808 6.808 0 0 1 90.981 0h1.616c3.769 0 6.824 3.047 6.824 6.806v10.263c0 .207-.029.38-.029.566l-4.622-7.143V6.91a2.64 2.64 0 0 0-2.608-2.665h-.757a2.672 2.672 0 0 0-2.64 2.665v10.058a2.644 2.644 0 0 0 2.64 2.633h.757a2.609 2.609 0 0 0 2.586-2.328.9.9 0 0 0 0-.104.822.822 0 0 0-.129-.44l-3.591-5.546h2.78l7.998 12.323h-2.78l-.837-1.293Z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="left-nav">
+          <ul>
+            <li><a href="/mobiles">Mobiler</a></li>
+            <li><a href="/mobiles">Mobilabonemang</a></li>
+            <li><a href="/mobiles">Kontantkort</a></li>
+            <li><a href="/mobiles">BredBand</a></li>
+            <li><a href="/mobiles">Smartwatch</a></li>
+            <li><a href="/mobiles">Hjälp</a></li>
+          </ul>
+        </div>
+
+        <div class="right-nav">
+          <ul>
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <a href="/search">Sök</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-user"></i>
+              <a href="/user">Mitt Konto</a>
+            </li>
+            <button class="btn btn1">Tanka</button>
+          </ul>
+        </div>
+
+        <div class="mobile-right-nav">
+          <ul>
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <a href="/search">Sök</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-user"></i>
+              <a href="/user">Mit Konto</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-gas-pump"></i>
+              <a href="/mobiles">Tanka</a>
+            </li>
+            <li class="open-icon">
+              <i class="fa-solid fa-bars" data-visible="false"></i>
+              <a>Meny</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- <nav class="mobile-menu" data-visible="false">
+        <div class="top-bar">
+          <div class="logo">
+            <a href="/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="102"
+                height="24"
+                fill="none"
+              >
+                <path
+                  fill="current"
+                  fill-rule="evenodd"
+                  d="M8.411 0c3.775 0 6.993 3.113 6.993 6.509v3.084h-4.798V7.157c0-1.734-1.16-2.808-2.597-2.808h-.618c-1.426 0-2.6 1.082-2.6 2.808v9.596c0 1.344 1.164 2.777 2.6 2.777h.622c1.422 0 2.596-1.419 2.596-2.777v-2.468h4.795v2.622c-.03 3.834-3.135 6.936-6.978 6.971H6.989C3.143 23.841.038 20.733.014 16.897V6.509C.014 3.113 3.214 0 6.974 0h1.437Zm18.353 0c3.778 0 6.993 3.113 6.993 6.52v10.387c-.03 3.834-3.135 6.936-6.979 6.971h-1.436c-3.854-.027-6.97-3.138-6.993-6.981V6.509C18.35 3.113 21.564 0 25.327 0h1.437Zm2.198 16.753-.003-9.596c0-1.734-1.16-2.808-2.597-2.808h-.618c-1.426 0-2.6 1.081-2.6 2.808v9.596c0 1.344 1.164 2.777 2.6 2.777h.621c1.423 0 2.597-1.419 2.597-2.777Zm16.575-6.232L50.148.369h3.958v23.144h-4.64V10.954l-3.93 8.547h-.308l-3.836-8.547v12.559h-4.611V.369h4.238l4.518 10.152Zm19.775 6.326L68.961.369h4.856L67.94 23.513h-5.632L56.743.369h4.855l3.714 16.478ZM76.475.369h4.733v23.14h-4.733V.37Zm21.714 21.844.004-.004a.36.36 0 0 0-.535-.047 6.805 6.805 0 0 1-4.522 1.716H90.98c-3.769 0-6.824-3.047-6.824-6.806V6.806a6.772 6.772 0 0 1 1.991-4.82A6.808 6.808 0 0 1 90.981 0h1.616c3.769 0 6.824 3.047 6.824 6.806v10.263c0 .207-.029.38-.029.566l-4.622-7.143V6.91a2.64 2.64 0 0 0-2.608-2.665h-.757a2.672 2.672 0 0 0-2.64 2.665v10.058a2.644 2.644 0 0 0 2.64 2.633h.757a2.609 2.609 0 0 0 2.586-2.328.9.9 0 0 0 0-.104.822.822 0 0 0-.129-.44l-3.591-5.546h2.78l7.998 12.323h-2.78l-.837-1.293Z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <li class="close-icon">
+            <i class="fa-solid fa-xmark" data-visible="false"></i>
+            <span>Stäng</span>
+          </li>
+        </div>
+
+        <div class="menu-list-products">
+          <a><span>Mobiler</span></a>
+          <a><span>Mobilaabonemang</span></a>
+          <a><span>Kontantkort</span></a>
+          <a><span>BredBand</span></a>
+          <a><span>Smartwatch</span></a>
+          <a><span>Hjälp</span></a>
+          <a><span>Tanka</span></a>
+          <button class="btn login">
+            <i class="fa-solid fa-user"></i>
+            <span>Logga In</span>
+          </button>
+      </nav> -->
+    </header>
+
+    <main>
+      <section class="own-hero">
+        <div class="container">
+          <div class="desktop-hero medium-hero mobile-hero">
+            <div class="left-side">
+              <h1>Månadens mobil</h1>
+              <span>
+                Spara 8766 kr på Samsung Galaxy S23! <br />
+                Från 329 kr/mån med 40 GB surf.
+              </span>
+              <button class="btn galaxy">Galaxy S24 Ultra</button>
+            </div>
+            <div class="right-side">
+              <img
+                src="images/C24001_MM_Juni_comviq-se_1920x1080_transparent.avif"
+                alt="Samsung Galaxy S24 Ultra"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mobiles">
+        <div class="container">
+          <h1>Skaffa mobil med 5G-abonnemang</h1>
+
+          <div class="mobile-cards">
+            <!-- Card 1 -->
+            <div class="mobile-card">
+              <div class="image-with-colors">
+                <div class="colors">
+                  <div class="color color1"></div>
+                </div>
+                <img
+                  src="images/Samsung_Galaxy_S24_Ultra_TitaniumBlack_Extra_TV2.avif"
+                  alt="product1"
+                />
+              </div>
+              <div class="card-content">
+                <span class="give-away">Tv på köpet</span>
+                <span class="factory">Samsung</span>
+                <h2 class="model-name">Galaxy S24 Ultra</h2>
+                <span class="price">649 kr/mån</span>
+                <button class="btn order">Beställ</button>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="mobile-card">
+              <div class="image-with-colors">
+                <div class="colors">
+                  <div class="color color2"></div>
+                  <div class="color color1"></div>
+                  <div class="color color3"></div>
+                  <div class="color color4"></div>
+                  <div class="color color5"></div>
+                </div>
+                <img
+                  src="images/iPhone-15-Blue-IQ---front.avif  "
+                  alt="product1"
+                />
+              </div>
+              <div class="card-content">
+                <span class="give-away">40 GB till priset av 10 GB</span>
+                <span class="factory">Apple</span>
+                <h2 class="model-name">iPhone 15</h2>
+                <span class="price">419 kr/mån</span>
+                <button class="btn order">Beställ</button>
+              </div>
+            </div>
+
+            <!-- Card 3-->
+            <div class="mobile-card">
+              <span class="giveaway-2">Hörlurar på köpet</span>
+              <div class="image-with-colors">
+                <div class="colors">
+                  <div class="color color1"></div>
+                  <div class="color color2"></div>
+                  <div class="color color3"></div>
+                  <div class="color color6"></div>
+                </div>
+                <img
+                  src="images/Samsung_Galaxy_S24_OnyxBlack_Buds2Pro_Bundle.avif"
+                  alt="product1"
+                />
+              </div>
+              <div class="card-content">
+                <span class="give-away">40 GB till priset av 10 GB</span>
+                <span class="factory">Samsung</span>
+                <h2 class="model-name">Galaxy S24</h2>
+                <span class="price">399 kr/mån</span>
+                <button class="btn order">Beställ</button>
+              </div>
+            </div>
+
+            <!-- Card 4-->
+            <div class="mobile-card">
+              <div class="image-with-colors">
+                <div class="colors">
+                  <div class="color color1"></div>
+                  <div class="color color2"></div>
+                  <div class="color color3"></div>
+                  <div class="color color6"></div>
+                </div>
+                <img
+                  src="images/iPhone-15-Pro-Max-Naturligt-Titan-IQ---front.avif"
+                  alt="product1"
+                />
+              </div>
+              <div class="card-content">
+                <span class="give-away">40 GB till priset av 10 GB</span>
+                <span class="factory">Apple</span>
+                <h2 class="model-name">iPhone 15 Pro Max</h2>
+                <span class="price">599 kr/mån</span>
+                <button class="btn order">Beställ</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn more-mobiles">Se alla våra mobiler</button>
+        </div>
+      </section>
+
+      <section class="monthly-surf">
+        <div class="container">
+          <h1>Skaffa mobilabonnemang</h1>
+          <div class="advantages">
+            <span>
+              <i class="fa-solid fa-check"></i>
+              Ingen bindningstid</span
+            >
+            <span> <i class="fa-solid fa-check"></i> Alltid billigt</span>
+            <span><i class="fa-solid fa-check"></i> Grym täckning</span>
+          </div>
+
+          <div class="abonemang-cards">
+            <div class="card">
+              <span class="giveaway-2">Spara 1200 kr</span>
+
+              <h1>100 GB</h1>
+
+              <div class="extras">
+                <span>
+                  <i class="fa-solid fa-check"></i>
+                  Fria samtal & SMS</span
+                >
+                <span> <i class="fa-solid fa-check"></i> 1000 utlandsmin</span>
+                <span><i class="fa-solid fa-check"></i> Spara surfen</span>
+                <span><i class="fa-solid fa-check"></i> 5G ingår</span>
+              </div>
+
+              <h2 class="old-price">395 kr/mån</h2>
+              <h2 class="new-price">295 kr/mån</h2>
+
+              <button class="btn order">Beställ</button>
+            </div>
+
+            <div class="card">
+              <span class="giveaway-2">Spara 840 kr</span>
+
+              <h1>40 GB</h1>
+
+              <div class="extras">
+                <span>
+                  <i class="fa-solid fa-check"></i>
+                  Fria samtal & SMS</span
+                >
+                <span> <i class="fa-solid fa-check"></i> 250 utlandsmin</span>
+                <span><i class="fa-solid fa-check"></i> Spara surfen</span>
+                <span><i class="fa-solid fa-check"></i> 5G ingår</span>
+              </div>
+
+              <h2 class="old-price">295 kr/mån</h2>
+              <h2 class="new-price">225 kr/mån</h2>
+
+              <button class="btn order">Beställ</button>
+            </div>
+
+            <div class="card card3">
+              <span class="giveaway-2">Spara 360 kr</span>
+
+              <h1>20 GB</h1>
+
+              <div class="extras">
+                <span>
+                  <i class="fa-solid fa-check"></i>
+                  Fria samtal & SMS</span
+                >
+                <span> <i class="fa-solid fa-check"></i> 100 utlandsmin</span>
+                <span><i class="fa-solid fa-check"></i> Spara surfen</span>
+                <span><i class="fa-solid fa-check"></i> 5G ingår</span>
+              </div>
+
+              <h2 class="old-price">225 kr/mån</h2>
+              <h2 class="new-price">195 kr/mån</h2>
+
+              <button class="btn order">Beställ</button>
+            </div>
+
+            <div class="card card4">
+              <h1>6 GB</h1>
+
+              <div class="extras">
+                <span>
+                  <i class="fa-solid fa-check"></i>
+                  Fria samtal & SMS</span
+                >
+                <span><i class="fa-solid fa-check"></i> 5G ingår</span>
+              </div>
+
+              <div class="bottom-part">
+                <h2 class="new-price">145 kr/mån</h2>
+
+                <button class="btn order">Beställ</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn more-mobiles">Se våra mobileabonemang</button>
+          <span class="rabatt"
+            >Rabatten på utvalda mobilabonnemang gäller i 12 månader. Kampanjen
+            gäller nya kunder samt dig som byter från kontantkort till
+            abonnemang.</span
+          >
+        </div>
+      </section>
+
+      <section class="bredband">
+        <div class="container">
+          <h1>Skaffa bredbandsabonnemang</h1>
+          <div class="advantages">
+            <span>
+              <i class="fa-solid fa-check"></i>
+              Obegränsad surf
+            </span>
+            <span>
+              <i class="fa-solid fa-check"></i> Enkelt att komma igång</span
+            >
+            <span><i class="fa-solid fa-check"></i> Utan startavgifter</span>
+          </div>
+          <div class="bredband-cards">
+            <div class="card">
+              <span class="giveaway-2">Router ingår</span>
+              <h1>Mobilt BredBand</h1>
+              <div class="extras">
+                <span> <i class="fa-solid fa-check"></i> Obegränsad surf </span>
+
+                <span> <i class="fa-solid fa-check"></i> Ta med hemifrån</span>
+                <span><i class="fa-solid fa-check"></i> Router ingår</span>
+              </div>
+
+              <h2 class="old-price">399 kr/mån</h2>
+              <h2 class="new-price">299 kr/mån</h2>
+
+              <button class="btn order">Beställ</button>
+            </div>
+
+            <div class="card">
+              <span class="giveaway-2">Rabatt 1 år</span>
+              <h1>Fiberbredband</h1>
+              <div class="extras">
+                <span> <i class="fa-solid fa-check"></i> Ingen bindning </span>
+
+                <span> <i class="fa-solid fa-check"></i> Välj startdatum</span>
+                <span><i class="fa-solid fa-check"></i> Surfgaranti</span>
+              </div>
+
+              <h2 class="old-price">469 kr/mån</h2>
+              <h2 class="new-price">429 kr/mån</h2>
+
+              <button class="btn order">Beställ</button>
+            </div>
+          </div>
+          <button class="btn more-mobiles">Gå till bredband</button>
+        </div>
+      </section>
+
+      <section class="news">
+        <div class="container">
+          <h1>Nyheter och erbjudanden</h1>
+          <div class="news-coupons">
+            <div class="family-coupon">
+              <div class="deal-info">
+                <h2>
+                  Familjeabonnemang! <br />
+                  40 GB surf var.
+                </h2>
+                <button class="btn read-more">Läs mer</button>
+              </div>
+            </div>
+
+            <div class="change-old-coupon">
+              <div class="deal-info">
+                <h2>
+                  Byt in din gamla mobil <br />
+                  och få rabatt.
+                </h2>
+                <button class="btn read-more">Läs mer</button>
+              </div>
+            </div>
+
+            <div class="news-deals">
+              <div class="deal-info">
+                <h2>
+                  Nyheter och <br />
+                  schyssta deals
+                </h2>
+                <button class="btn read-more">Läs mer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="app">
+        <div class="container">
+          <div class="app-download">
+            <div class="download">
+              <h1>Ladda ner vår app!</h1>
+              <img
+                src="images/hamta-i-app-store-68990_1080x416.png"
+                alt="app store download"
+              />
+              <img src="images/ladda-ned-google.png" alt="app store download" />
+            </div>
+
+            <p>
+              Du vet väl om att du kan göra det mesta i vår app? <br />
+              Betala dina fakturor, tanka på ditt kontaktkort och mycket mer.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="first footer-parts">
+          <span>
+            <i class="fa-solid fa-heart"></i>
+            Populära sidor
+          </span>
+          <ul>
+            <li>Familjeabonnemang</li>
+            <li>Studentabonnemang</li>
+            <li>Seniorabonemang</li>
+            <li>eSIM</li>
+            <li>5G hos Comviq</li>
+            <li>Surf</li>
+            <li>Byt in din gamla mobil</li>
+          </ul>
+        </div>
+
+        <div class="second footer-parts">
+          <span>
+            <i class="fa-solid fa-mobile"></i>
+            Varumärken
+          </span>
+          <ul>
+            <li>Apple iPhone</li>
+            <li>Apple Watch</li>
+            <li>Samsung Galaxy</li>
+            <li>Samsung Galaxy Watch</li>
+            <li>Google Pixel</li>
+            <li>Xiaomi</li>
+            <li>OnePlus</li>
+            <li>Sony Xperia</li>
+            <li>Motorola</li>
+          </ul>
+        </div>
+
+        <div class="third footer-parts">
+          <span>
+            <i class="fa-solid fa-question"></i>
+            Hjälp
+          </span>
+          <ul>
+            <li>Till hjälp</li>
+            <li>Spåra din beställning</li>
+            <li>Driftinformation</li>
+            <li>Utland</li>
+            <li>Registrera kontantkort</li>
+          </ul>
+        </div>
+
+        <div class="fourth footer-parts">
+          <span>
+            <i class="fa-solid fa-user"></i>
+            Mitt Konto
+          </span>
+          <ul>
+            <li>Familjeabonnemang</li>
+            <li>Studentabonnemang</li>
+            <li>Seniorabonemang</li>
+            <li>eSIM</li>
+            <li>5G hos Comviq</li>
+            <li>Surf</li>
+            <li>Byt in din gamla mobil</li>
+          </ul>
+        </div>
+
+        <div class="fifth footer-parts">
+          <span>
+            <i class="fa-regular fa-lightbulb"></i>
+            Om Comviq
+          </span>
+          <ul>
+            <li>Familjeabonnemang</li>
+            <li>Studentabonnemang</li>
+            <li>Seniorabonemang</li>
+            <li>eSIM</li>
+            <li>5G hos Comviq</li>
+            <li>Surf</li>
+            <li>Byt in din gamla mobil</li>
+          </ul>
+        </div>
+      </div>
+      <div class="second-footer">
+        <div class="container">
+          <div class="content">
+            <a href="#">Cookies</a>
+            <a href="#">Inställningar</a>
+            <a href="#">Säkerhet på nätet</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
